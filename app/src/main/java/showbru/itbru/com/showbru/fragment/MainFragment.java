@@ -34,6 +34,19 @@ public class MainFragment extends Fragment{
             }
         });
 
+        TextView textView1 = getView().findViewById(R.id.txtMenu);
+        textView1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getActivity().getSupportFragmentManager()
+                        .beginTransaction()
+                        .addToBackStack(null)
+                        .commit();
+            }
+        });
+
+
+
     }
 
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
